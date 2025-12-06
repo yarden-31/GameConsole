@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GameConsole.Base
+{
+    internal class GameMenuScreen : MenuScreen
+    {
+        
+        public GameMenuScreen(string title) : base(title)
+        {
+
+        }
+
+        //-----------------------------------------------------------
+
+    }
+}
