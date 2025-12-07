@@ -18,10 +18,11 @@ namespace GameConsole.Date
             var existingUser = users.FirstOrDefault(registeredUser => registeredUser.UserName == userName);
             if (existingUser != null)
             {
-                throw new Exception("This UserName Already Exists in our System..");
+                throw new Exception("This UserName already exists in our System..");
             }
             users.Add(new User(name, userName, password));
             return users.Last();
+
         }
 
         //-----------------------------------------------------------
@@ -29,11 +30,11 @@ namespace GameConsole.Date
         public static User Login (string Name, string password)
         {
             var existingUser = users.FirstOrDefault(registeredUser => registeredUser.Name == Name && registeredUser.Password == password);
+            
             if (existingUser == null)
             {
                 throw new Exception("This user doesnt exist with this password.");
-                return null;
-            }
+                }
             return existingUser;
         }
 

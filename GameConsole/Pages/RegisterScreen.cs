@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GameConsole.Base;
+using GameConsole.Date;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GameConsole.Base;
 
 
 namespace GameConsole.Pages
@@ -31,12 +32,17 @@ namespace GameConsole.Pages
 
             Console.WriteLine("Enter Account User: ");
             user = Console.ReadLine();
+            while (UserDb.RegisterUser(name, user, password) != null)
+            {
+                Console.WriteLine("This UserName already exists, please enter a new user:");
+                user = Console.ReadLine();
+                return;
+            }
 
             Console.WriteLine("Enter Account Password: ");
             password = Console.ReadLine();
 
             Console.WriteLine("New Account has been made!");
-            
 
             Console.ReadKey();
         }

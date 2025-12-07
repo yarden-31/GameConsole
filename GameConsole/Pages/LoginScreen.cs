@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GameConsole.Base;
+using GameConsole.Date;
 
 namespace GameConsole.Pages
 {
@@ -24,6 +25,16 @@ namespace GameConsole.Pages
 
             Console.WriteLine("Enter Account Password: ");
             string password = Console.ReadLine();
+
+            while (UserDb.Login(user, password) == null)
+            {
+                Console.WriteLine("Invalid UserName or Password, please try again: ");
+                Console.WriteLine("Enter Account User: ");
+                user = Console.ReadLine();
+
+                Console.WriteLine("Enter Account Password: ");
+                password = Console.ReadLine();
+            }
 
             Console.WriteLine("Login Successful!");
             Console.ReadKey();
