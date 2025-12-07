@@ -9,7 +9,7 @@ namespace GameConsole.Date
 {
     internal class UserDb
     {
-        private static List<User> users;
+        private static List<User> users = new List<User>();
 
         //-----------------------------------------------------------
 
@@ -29,23 +29,23 @@ namespace GameConsole.Date
 
         public static User Login (string Name, string password)
         {
-            var existingUser = users.FirstOrDefault(registeredUser => registeredUser.Name == Name && registeredUser.Password == password);
-            
-            if (existingUser == null)
-            {
-                throw new Exception("This user doesnt exist with this password.");
-                }
-            return existingUser;
+             return users.FirstOrDefault(registeredUser => registeredUser.Name == Name && registeredUser.Password == password);
+           
         }
 
         //-----------------------------------------------------------
 
         public static void UpdateUser (User user)
         {
+
+            //var existingUser = users.Single(registeredUser => registeredUser.UserName == user.UserName);
+            //existingUser.Name = user.Name;
+            //existingUser.Password = user.Password;
+
             var existingUserIndex = users.FindIndex(registeredUser => registeredUser.UserName == user.UserName);
             if (existingUserIndex == -1)
             {
-                InvalidOperationException doesntExists = new InvalidOperationException("No such user exists.");
+                throw new InvalidOperationException("No such user exists.");
             }
             users[existingUserIndex] = user;
         }
