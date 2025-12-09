@@ -18,7 +18,7 @@ namespace GameConsole.Date
             var existingUser = users.FirstOrDefault(registeredUser => registeredUser.UserName == userName);
             if (existingUser != null)
             {
-                throw new Exception("This UserName already exists in our System..");
+                return null;
             }
             users.Add(new User(name, userName, password));
             return users.Last();
@@ -49,5 +49,24 @@ namespace GameConsole.Date
             }
             users[existingUserIndex] = user;
         }
+
+        //-----------------------------------------------------------
+
+        public static void UpdateName (User user, string newName)
+        {
+            var existingUser = users.Single(registeredUser => registeredUser.UserName == user.UserName);
+            existingUser.Name = newName;
+        }
+
+        //-----------------------------------------------------------
+
+        public static void UpdatePassword (User user, string newPassword)
+        {
+            var existingUser = users.Single(registeredUser => registeredUser.UserName == user.UserName);
+            existingUser.Password = newPassword;
+        }
+
+        //-----------------------------------------------------------
+
     }
 }
