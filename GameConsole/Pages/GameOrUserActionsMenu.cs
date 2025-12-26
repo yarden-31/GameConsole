@@ -14,6 +14,7 @@ namespace GameConsole.Pages
         {
             AddMenuItem(new MenuItem("Game Menu", new GameMenu()));
             AddMenuItem(new MenuItem("User Actions Menu", new UserActionsMenu()));
+            AddMenuItem(new MenuItem("Game History Menu", new GameHistoryMenu()));
         }
     }
 }

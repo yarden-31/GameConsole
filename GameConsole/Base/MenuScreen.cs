@@ -64,6 +64,7 @@ namespace GameConsole.Base
 
                 if (choose <= items.Count)
                 {
+                    
                     items[choose - 1].screen.Show();
                     Console.Clear();
                     Show();

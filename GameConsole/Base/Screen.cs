@@ -24,13 +24,22 @@ namespace GameConsole.Base
 
         public virtual void Show()
         {
+            // make background color black and text color cyan
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Clear();
 
-            CenterText(Title);
+            int contentWidth = Title.Length + 2;
+            int boxWidth = contentWidth + 2;
+            int leftPadding = (Console.WindowWidth - boxWidth) / 2;
 
-            //int spacing = (Console.WindowWidth - Title.Length) / 2;
-            //Console.WriteLine(new string(' ', spacing) + Title);
+            // makes a frame box around the title
+            string pad = new string(' ', leftPadding);
+            Console.WriteLine(pad + "╔" + new string('═', contentWidth) + "╗");
+            Console.WriteLine(pad + "║ " + Title + " ║");
+            Console.WriteLine(pad + "╚" + new string('═', contentWidth) + "╝");
         }
+
 
         //-----------------------------------------------------------
 

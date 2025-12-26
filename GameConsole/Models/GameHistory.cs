@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameConsole.Models
 {
-    internal class HighScore
+    internal class GameHistory
     {
         public string GameTitle { get; set; }
 
@@ -16,7 +16,7 @@ namespace GameConsole.Models
 
         //-----------------------------------------------------------
 
-        public HighScore(string gameTitle, int score)
+        public GameHistory(string gameTitle, int score)
         {
             GameTitle = gameTitle;
             Score = score;
@@ -24,7 +24,5 @@ namespace GameConsole.Models
         }
 
         //-----------------------------------------------------------
-
-        
     }
 }

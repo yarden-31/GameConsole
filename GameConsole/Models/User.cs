@@ -13,6 +13,7 @@ namespace GameConsole.Models
         public string Password { get; set; }
 
         public List<HighScore> HighScores { get; set; } = new List<HighScore>();
+        public List<GameHistory> GameHistory { get; set; } = new List<GameHistory>();
 
         //-----------------------------------------------------------
 
