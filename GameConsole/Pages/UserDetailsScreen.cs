@@ -24,7 +24,7 @@ namespace GameConsole.Pages
             string text = "User Details Screen";
             Console.WriteLine($"User Details for: {ConsoleGame.user.Name}");
             Console.WriteLine($"Username: {ConsoleGame.user.UserName}");
-            Console.WriteLine($"Name: {ConsoleGame.user.Name}");
+            Console.WriteLine($"Password: {ConsoleGame.user.Password}");
             Console.WriteLine("High Scores:");
             var hsList = ConsoleGame.user.HighScores;
             hsList = hsList.OrderByDescending(hs => hs.Score).ToList();
