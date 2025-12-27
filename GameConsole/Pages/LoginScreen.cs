@@ -35,6 +35,7 @@ namespace GameConsole.Pages
 
                 Console.WriteLine("Enter Account Password: ");
                 password = Console.ReadLine();
+                u = UserDb.Login(user, password);
             }
             ConsoleGame.user = u;
             Console.WriteLine("Login Successful!");
