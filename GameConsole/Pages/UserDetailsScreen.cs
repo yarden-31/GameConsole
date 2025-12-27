@@ -18,6 +18,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = "User Details Screen";
             Console.WriteLine($"User Details for: {ConsoleGame.user.Name}");
             Console.WriteLine($"Username: {ConsoleGame.user.UserName}");

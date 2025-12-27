@@ -24,6 +24,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = "Update Name Screen";
             Console.WriteLine("Enter New Account Name: ");
             string newName = Console.ReadLine();

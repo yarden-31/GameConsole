@@ -16,6 +16,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = ("Last Game Played Details Screen");
             Console.WriteLine("Last Game Played Details:");
             if (ConsoleGame.user.GameHistory != null && ConsoleGame.user.GameHistory.Count > 0)

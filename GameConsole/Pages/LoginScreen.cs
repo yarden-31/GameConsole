@@ -20,6 +20,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = "Login Screen";
             Console.WriteLine("Enter Account User: ");
             string user = Console.ReadLine();

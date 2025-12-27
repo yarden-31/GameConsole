@@ -18,6 +18,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = "Update Password Screen";
             Console.WriteLine("Current Password: " + ConsoleGame.user.Password);
             Console.WriteLine("Enter New Account Password: ");

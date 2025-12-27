@@ -26,6 +26,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = "Register Screen";
             Console.WriteLine("Enter Account Name: ");
             name = Console.ReadLine();

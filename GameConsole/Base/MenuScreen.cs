@@ -42,6 +42,9 @@ namespace GameConsole.Base
             base.Show();
 
             CenterText("Choose your screen: ");
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             bool exit = false;
             int choose = 0;
             while (!exit)

@@ -26,6 +26,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             Console.WriteLine("Press any key to start the game...");
             Console.ReadKey();
             Console.WriteLine($"Starting game: {game.Name}");

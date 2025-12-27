@@ -19,6 +19,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = "Welcome to the game console application";
             CenterText(text);
 

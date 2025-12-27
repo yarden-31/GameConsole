@@ -16,6 +16,9 @@ namespace GameConsole.Pages
         public override void Show()
         {
             base.Show();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
             string text = ("Game History By Name Screen");
             if (ConsoleGame.user.GameHistory != null)
             {

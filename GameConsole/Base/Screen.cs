@@ -26,7 +26,7 @@ namespace GameConsole.Base
         {
             // make background color black and text color cyan
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
 
             int contentWidth = Title.Length + 2;
