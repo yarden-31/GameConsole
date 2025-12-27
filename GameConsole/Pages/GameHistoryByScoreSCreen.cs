@@ -28,7 +28,7 @@ namespace GameConsole.Pages
             }
             Console.WriteLine("Press any key to return to the previous menu...");
             Console.ReadKey();
-            Screen next = new GameHistoryMenu();
+            Screen next = new GameOrUserActionsMenu();
             next.Show();
         }
     }
